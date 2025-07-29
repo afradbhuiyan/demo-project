@@ -93,6 +93,18 @@ function makeZip() {
     .pipe(gulp.dest('./'));
 }
 
+function makeBuild() {
+  return gulp
+    .src([
+      'src/**',
+      '!src/html/**',
+      '!src/assets/sass/**',
+      '!src/test.html',
+      '!src/assets/css/main.css.map',
+    ])
+    .pipe(gulp.dest('./build'));
+}
+
 async function clean() {
   deleteAsync(['src/*.html']);
 }
@@ -100,7 +112,9 @@ gulp.task('clean', await clean);
 gulp.task('htmlInclude', await htmlfileinclude);
 gulp.task('cssInclude', await style);
 gulp.task('makeZip', await makeZip);
+gulp.task('makeBuild', await makeBuild);
 gulp.task('watch', await watch);
 
 gulp.task('zip', series('clean', 'htmlInclude', 'cssInclude', 'makeZip'));
+gulp.task('build', series('clean', 'htmlInclude', 'cssInclude', 'makeBuild'));
 gulp.task('default', series('clean', 'htmlInclude', 'cssInclude', 'watch'));
