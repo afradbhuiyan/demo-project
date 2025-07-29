@@ -116,5 +116,5 @@ gulp.task('predeploy', await makeBuild);
 gulp.task('watch', await watch);
 
 gulp.task('zip', series('clean', 'htmlInclude', 'cssInclude', 'makeZip'));
-gulp.task('build', series('clean', 'htmlInclude', 'cssInclude', 'predeploy'));
+gulp.task('predeploy', series('clean', 'htmlInclude', 'cssInclude', 'predeploy'));
 gulp.task('default', series('clean', 'htmlInclude', 'cssInclude', 'watch'));
