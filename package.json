@@ -6,8 +6,8 @@
     "type": "module",
     "scripts": {
         "start": "gulp",
-        "zip": "gulp zip",
-        "predeploy": "gulp build",
+        "build": "gulp zip",
+        "predeploy": "gulp predeploy",
         "deploy": "gh-pages -d build"
     },
     "repository": {
