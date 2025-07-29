@@ -1,0 +1,46 @@
+/* ========================= Card CSS Start =========================== */
+.custom--card {
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid hsl(var(--border-color));
+
+  @include msm-screen {
+    padding: 16px;
+  }
+
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 0px;
+    background-color: transparent;
+  }
+
+  .card-header {
+    padding-bottom: 16px;
+    border-bottom: 1px solid hsl(var(--border-color));
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .card-body {
+    color: hsl(var(--body-color));
+  }
+
+  .card-footer {
+    padding-top: 16px;
+    border-top: 1px solid hsl(var(--border-color));
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+
+  .card-title {
+    color: hsl(var(--heading-color));
+    margin-bottom: 0;
+  }
+}
+
+/* ========================= Card CSS End ========================= */

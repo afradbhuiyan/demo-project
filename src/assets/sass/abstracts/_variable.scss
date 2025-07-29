@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ========================= CSS Variables Start ========================= */
+:root {
+  /* Font Family */
+  --heading-font: 'Ubuntu', sans-serif;
+  --body-font: 'Geologica', sans-serif;
+  /* Base Color */
+  @include colorVariable(--base, #842BE2, 5);
+
+  /* Base Two Color */
+  @include colorVariable(--base-two, #007AFF, 5);
+
+  /* Primary Color */
+  @include colorVariable(--primary, #6338ff, 5);
+
+  /* Secondary Color */
+  @include colorVariable(--secondary,#585b5e, 5);
+
+  /* Success Color */
+  @include colorVariable(--success, #35C75A, 5);
+
+  /* Danger Color */
+  @include colorVariable(--danger, #EB4E3D, 5);
+
+  /* Warning Color */
+  @include colorVariable(--warning, #FC0, 5);
+
+  /* Info Color */
+  @include colorVariable(--info, #3c83f6, 5);
+
+  /* Color Variables */
+  --white: 0 0% 100%; //#ffffff 
+  --black: 0 0% 0%; //#000000
+  --gray: 215 16% 47%; //#64748b
+  --gray-d-100: 215 19% 35%; //#475569
+  --gray-d-200: 215 25% 27%; //#334155
+  --gray-d-300: 217 33% 17%; //#1e293b
+  --gray-d-400: 222 47% 11%; //#0f172a
+  --gray-d-500: 229 84% 5%; //#020617
+  --gray-l-100: 215 20% 65%; //#94a3b8
+  --gray-l-200: 213 27% 84%; //#cbd5e1
+  --gray-l-300: 214 32% 91%; //#e2e8f0
+  --gray-l-400: 210 40% 96%; //#f1f5f9
+  --gray-l-500: 210 40% 98%; //#f8fafc
+  --body-bg: var(--white);
+  --section-bg: var(--gray-l-100);
+  --body-color: var(--gray);
+  --heading-color: var(--gray-d-500);
+  --border-color: var(--gray-l-300);
+  /* Shadow Variables */
+  --box-shadow: 0px 2px 15px hsl(var(--black) / 0.05);
+   /* Gradient Variable */
+   --gradient: linear-gradient(90deg, hsl(var(--base-two)) -177.5%, hsl(var(--base)) 64.5%);
+}
+
+/* ========================= CSS Variables End ========================= */

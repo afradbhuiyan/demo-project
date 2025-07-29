@@ -1,0 +1,40 @@
+/* ========================= Global CSS Start ========================= */
+.section-heading {
+  $sh: &;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @include lg-screen {
+    margin-bottom: 32px;
+  }
+
+  @include sm-screen {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 1.8745rem + 3.1274vw, 5rem);
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    font-size: rem(20px);
+    font-weight: 500;
+    line-height: 140%;
+    color: hsl(var(--white));
+
+    @include lg-screen {
+      font-size: rem(18px);
+    }
+  }
+
+  &.style-left {
+    text-align: left;
+  }
+}
+
+/* ========================= Globale CSS End ========================= */
