@@ -139,4 +139,41 @@
   @include gradient-btn(--gradient);
 }
 
+@property --gradient-btn-fill {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #fff;
+}
+
+.button {
+  --test: '';
+  border: none;
+  border-radius: 999px;
+  color: transparent;
+  background: linear-gradient(90deg, hsl(var(--success)), hsl(var(--danger))) border-box;
+  background-clip: text;
+  padding: 8px 16px;
+  transition: --gradient-btn-fill .8s ease, all .8s ease;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border: 1px solid transparent;
+    background: linear-gradient(var(--gradient-btn-fill) 0 0) padding-box, linear-gradient(90deg, hsl(var(--success)), hsl(var(--danger))) border-box;
+    border-radius: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    color: red;
+    --gradient-btn-fill: transparent;
+  }
+}
+
+
 /* ========================= Button CSS End =========================== */
